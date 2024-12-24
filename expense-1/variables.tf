@@ -4,11 +4,6 @@ variable "instance_names" {
 
 }
 
-variable "instance_type" {
-  type    = list(string)
-  default = []
-}
-
 variable "common_tags" {
   type = map(any)
   default = {
