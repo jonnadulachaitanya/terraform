@@ -14,7 +14,6 @@ variable "common_tags" {
     default = {
         Environment = "production"
         terraform = "true"
-        developed by = "chaitanya"
         project = "expense"
     }
 }

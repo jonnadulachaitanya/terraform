@@ -1,8 +1,8 @@
-resource "aws_instance" "expense-1" {
-    count = lenght(var.instance_names)
-    ami = data.aws_ami.expense1.id
+resource "aws_instance" "expense" {
+    count = length(var.instance_names)
+    ami = data.aws_ami.expense.id
     instance_type = var.instance_names[count.index] == "mysql" ? "t3.small" : "t3.micro" 
-    vpc_security_group_ids = [aws_security_group.expense1_sg.id]
+    vpc_security_group_ids = [aws_security_group.expense_sg.id]
 
     tags = merge (
         var.common_tags,
@@ -12,7 +12,7 @@ resource "aws_instance" "expense-1" {
     )
 }
 
-resource "aws_security_group" "expense1_sg" {
+resource "aws_security_group" "expense_sg" {
     name = "allow_ssh"
     description = "we are enabling port no 22 for ssh"
 

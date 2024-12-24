@@ -1,4 +1,4 @@
 output "instance_info" {
-    vaue =  aws_instance.expense1
+    value =  aws_instance.expense
 
 }

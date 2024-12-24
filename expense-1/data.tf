@@ -1,20 +1,20 @@
-data "aws_ami" "expense1" {
+data "aws_ami" "expense" {
     most_recent = "true"
-    owner = "973714476881"
+    owners = ["973714476881"]
 
     filter {
-        name = "ami-name"
-        value = ["RHEL-9-DevOps-Practice"]
+        name = "name"
+        values = ["RHEL-9-DevOps-Practice"]
     }
 
     filter {
         name = "root-device-type"
-        value = ["ebs"]
+        values = ["ebs"]
     }
 
     filter {
         name = "virtualization-type"
-        value = ["hvm"]
+        values = ["hvm"]
 
     }
 }
