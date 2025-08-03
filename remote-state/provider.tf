@@ -8,10 +8,10 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "chaitanya-project-remote-state"
-    key = "remote-state-demo"
-    region = "us-east-1"
-    dynamodb_table = "chaitanya-locking"
+      bucket = "chaitanya-project-remote-state"
+      key = "terraform-remotestate"
+      region = "us-east-1"
+      dynamodb_table = "chaitanya-locking"
   }
   
 }
